@@ -1,0 +1,29 @@
+server:
+  port: 34621
+  
+spring:
+  application:
+    name: forca
+    
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: validate
+      
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/forca_db
+    username: root
+    password: 12345678
+    
+  flyway:
+    enabled: true
+    url: jdbc:mysql://localhost:3306/forca_db
+    user: root
+    password: 12345678
+    locations: classpath:db/migration
+    
+logging:
+  level:
+    org.hibernate.type: trace
