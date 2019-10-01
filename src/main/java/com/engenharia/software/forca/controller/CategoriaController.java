@@ -58,13 +58,14 @@ public class CategoriaController {
 	}
 	
 	@GetMapping(value = "/listar")
-	public ResponseEntity<List<CategoriaDTO>> listarCategorias() {
+	public ResponseEntity<List<Categoria>> listarCategorias() {
 		List<Categoria> categorias = categoriaService.listarCategorias();
-		List<CategoriaDTO> listaCategoriasDTO = null;
-		categorias.forEach(categoria -> {
-			listaCategoriasDTO.add(ConverterCategoriaEntityToDto.converter(categoria));
-		});
-		return new ResponseEntity<List<CategoriaDTO>>(listaCategoriasDTO, HttpStatus.OK);
+		
+		if(categorias == null || categorias.isEmpty()) {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+		
+		return new ResponseEntity<List<Categoria>>(categorias, HttpStatus.OK);
 	}
 
 }
