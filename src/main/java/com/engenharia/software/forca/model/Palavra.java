@@ -11,6 +11,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,6 +22,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 @ToString
 public class Palavra implements Serializable{
 
@@ -41,6 +43,6 @@ public class Palavra implements Serializable{
 
 	@NotNull
 	@Column(name = "categoria_id")
-	private Long categoria_id;
+	private Long categoriaId;
 
 }

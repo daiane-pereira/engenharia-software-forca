@@ -14,9 +14,9 @@ public class RankingService {
 	@Autowired
 	private RankingRepository rankingRepository;
 	
-	public List<RankingDTO> getRanking() {
-		return rankingRepository.getRanking();
-	}
+//	public List<RankingDTO> getRanking() {
+//		return rankingRepository.getRanking();
+//	}
 	
 
 }

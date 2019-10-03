@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.engenharia.software.forca.converter.ConverterCategoriaDtoToEntity;
-import com.engenharia.software.forca.converter.ConverterCategoriaEntityToDto;
 import com.engenharia.software.forca.domain.CategoriaDTO;
 import com.engenharia.software.forca.model.Categoria;
 import com.engenharia.software.forca.service.CategoriaService;

@@ -21,15 +21,15 @@ public class RankingController {
 	@Autowired
 	private RankingService rankingService;
 	
-	@GetMapping(value = "/get")
-	public ResponseEntity<List<RankingDTO>> getRanking() throws NotFoundException {
-		
-		List<RankingDTO> listRankingDTO = rankingService.getRanking();
-		
-		if(!listRankingDTO.isEmpty()) {
-			return new ResponseEntity<List<RankingDTO>>(listRankingDTO, HttpStatus.OK);
-		} else {
-			throw new NotFoundException("Ranking nao encontrado");
-		}
-	}
+//	@GetMapping(value = "/get")
+//	public ResponseEntity<List<RankingDTO>> getRanking() throws NotFoundException {
+//		
+//		List<RankingDTO> listRankingDTO = rankingService.getRanking();
+//		
+//		if(!listRankingDTO.isEmpty()) {
+//			return new ResponseEntity<List<RankingDTO>>(listRankingDTO, HttpStatus.OK);
+//		} else {
+//			throw new NotFoundException("Ranking nao encontrado");
+//		}
+//	}
 }
