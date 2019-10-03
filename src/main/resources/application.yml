@@ -12,11 +12,11 @@ spring:
       ddl-auto: validate
       
   datasource:
-    url: ${JDBC_DATASOURCE_URL}
+    url: ${DATABASE_URL}
     
   flyway:
     enabled: true
-    url: ${JDBC_DATASOURCE_URL}
+    url: ${DATABASE_URL}
     locations: classpath:db/migration
     
 logging:
