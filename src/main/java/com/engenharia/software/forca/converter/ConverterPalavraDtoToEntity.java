@@ -9,7 +9,7 @@ public class ConverterPalavraDtoToEntity {
 		return Palavra.builder()
 			   .palavra(palavraDTO.getPalavra())
 			   .dica(palavraDTO.getDica())
-			   .categoriaId(palavraDTO.getCategoria_id())
+			   .categoria(palavraDTO.getCategoria())
 			   .build();
 	}
 }

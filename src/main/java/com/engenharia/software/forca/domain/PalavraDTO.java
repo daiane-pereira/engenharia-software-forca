@@ -3,6 +3,8 @@ package com.engenharia.software.forca.domain;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import com.engenharia.software.forca.model.Categoria;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -23,6 +25,6 @@ public class PalavraDTO {
 	private String dica;
 	
 	@NotNull(message = "Categoria nao informada.")
-	private Long categoria_id;
+	private Categoria categoria;
 	
 }

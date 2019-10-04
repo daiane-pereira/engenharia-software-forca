@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -31,11 +33,13 @@ public class RodadaJogador implements Serializable {
 	private Long id;
 
 	@NotNull
-	@Column(name = "rodada_id")
-	private Long rodada_id;
+	@ManyToOne
+	@JoinColumn(name = "rodada_id")
+	private Rodada rodada;
 
 	@NotNull
-	@Column(name = "jogador_id")
-	private Long jogador_id;
+	@ManyToOne
+	@JoinColumn(name = "jogador_id")
+	private Jogador jogador;
 
 }

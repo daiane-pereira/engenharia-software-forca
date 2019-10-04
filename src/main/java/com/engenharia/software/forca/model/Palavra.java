@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -42,7 +44,8 @@ public class Palavra implements Serializable{
 	private String dica;
 
 	@NotNull
-	@Column(name = "categoria_id")
-	private Long categoriaId;
+	@ManyToOne
+	@JoinColumn(name = "categoria_id")
+	private Categoria categoria;
 
 }
