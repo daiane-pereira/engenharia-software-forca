@@ -12,15 +12,15 @@ spring:
       ddl-auto: validate
       
   datasource:
-    url: jdbc:${JDBC_DATABASE_URL}
-    username: ${JDBC_DATABASE_USERNAME}
-    password: ${JDBC_DATABASE_PASSWORD}
+    url: jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_a1dd069016e3708
+    username: b1b983fabbca16
+    password: 1b93a38c
     
   flyway:
     enabled: true
-    url: jdbc:${JDBC_DATABASE_URL}
-    user: ${JDBC_DATABASE_USERNAME}
-    password: ${JDBC_DATABASE_PASSWORD}
+    url: jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_a1dd069016e3708
+    user: b1b983fabbca16
+    password: 1b93a38c
     locations: classpath:db/migration
     
 logging:
