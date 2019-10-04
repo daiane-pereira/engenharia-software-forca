@@ -1,5 +1,4 @@
-# Spring Boot API
-#Jogo da Forca
+# Spring Boot API - Jogo da Forca
 
 API Rest em Java utilizando Spring Boot, contendo endpoints para página administrativa, persistência de jogadas e consulta de ranking do jogo da forca.
 
@@ -29,3 +28,24 @@ Acessar a pasta do projeto e executar os seguintes comandos:
 gradle build
 gradle bootRun
 ```
+## Serviços 
+
+Rota para incluir Categoria: __[URL]/categoria/incluir__
+Exemplo:
+```
+{
+	"descricao": "Frutas"
+}
+```
+
+Rota para alterar Categoria: __[URL]/categoria/alterar/1__
+Exemplo:
+```
+{
+	"descricao": "Frutas Vermelhas"
+}
+```
+
+Rota para excluir Categoria: __[URL]/categoria/remover/1__
+
+Rota para listar TODAS Categorias: __[URL]/categoria/listar__
