@@ -25,7 +25,6 @@ public class RodadaJogadorDTO {
 	@NotNull(message = "Pontuacao nao informada.")
 	private Long pontuacao;
 	
-	@NotEmpty(message = "Categoria nao informada.")
 	private Categoria categoria;
 
 }

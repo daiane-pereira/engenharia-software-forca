@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.engenharia.software.forca.domain.RankingDTO;
+import com.engenharia.software.forca.domain.RodadaJogadorDTO;
 import com.engenharia.software.forca.service.RankingService;
 
 import javassist.NotFoundException;
@@ -23,15 +23,10 @@ public class RankingController {
 	@Autowired
 	private RankingService rankingService;
 	
-//	@GetMapping(value = "/get")
-//	public ResponseEntity<List<RankingDTO>> getRanking() throws NotFoundException {
-//		
-//		List<RankingDTO> listRankingDTO = rankingService.getRanking();
-//		
-//		if(!listRankingDTO.isEmpty()) {
-//			return new ResponseEntity<List<RankingDTO>>(listRankingDTO, HttpStatus.OK);
-//		} else {
-//			throw new NotFoundException("Ranking nao encontrado");
-//		}
-//	}
+	@GetMapping(value = "/listar")
+	public ResponseEntity<List<Object>> getRanking() throws NotFoundException {
+		
+		List<Object> listRankingDTO = rankingService.listarRanking();
+		return new ResponseEntity<List<Object>>(listRankingDTO, HttpStatus.OK);
+	}
 }

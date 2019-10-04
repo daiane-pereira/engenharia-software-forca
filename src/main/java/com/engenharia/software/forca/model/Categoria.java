@@ -32,7 +32,6 @@ public class Categoria implements Serializable{
 	@Column(name = "id")
 	private Long id;
 	
-	@NotBlank
 	@Column(name = "descricao")
 	private String descricao;
 	

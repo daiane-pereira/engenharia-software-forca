@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -34,7 +35,6 @@ public class Rodada implements Serializable {
 	@Column(name = "id")
 	private Long id;
 	
-	@NotNull
 	@ManyToOne
 	@JoinColumn(name = "categoria_id")
 	private Categoria categoria;
