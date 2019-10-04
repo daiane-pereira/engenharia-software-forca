@@ -30,22 +30,63 @@ gradle bootRun
 ```
 ## Serviços 
 
-Rota para incluir Categoria: __[URL]/categoria/incluir__
-Exemplo:
+Rota para incluir Categoria: __URL/categoria/incluir__
 ```
 {
 	"descricao": "Frutas"
 }
 ```
 
-Rota para alterar Categoria: __[URL]/categoria/alterar/1__
-Exemplo:
+Rota para alterar Categoria: __URL/categoria/alterar/{id_categoria}__
 ```
 {
 	"descricao": "Frutas Vermelhas"
 }
 ```
 
-Rota para excluir Categoria: __[URL]/categoria/remover/1__
+Rota para excluir Categoria: __URL/categoria/remover/{id_categoria}__
 
-Rota para listar TODAS Categorias: __[URL]/categoria/listar__
+Rota para listar TODAS Categorias: __URL/categoria/listar__
+
+Rota para incluir Palavra: __URL/palavra/incluir__ 
+```
+{
+	"palavra": "Morango",
+	"dica": "Desenho infantil",
+	"categoria": {
+		"id": 1,
+		"descricao": "Frutas Vermelhas"
+	}
+}
+```
+Rota para alterar Palavra: __URL/palavra/alterar/{id_palavra}__ 
+```
+{
+	"palavra": "Melancia",
+	"dica": "Desenho infantil",
+	"categoria": {
+		"id": 1,
+		"descricao": "Frutas Vermelhas"
+	}
+}
+```
+
+Rota para excluir Palavra: __URL/palavra/remover/{id_palavra}__
+
+Rota para listar TODAS as Palavras: __URL/palavra/listar__
+
+Rota para listar Palavras por Categoria: __URL/palavra/listar/{id_categoria}/categoria__
+
+Rota para salvar Rodada do Jogador: __URL/rodada/jogador__
+```
+{
+	"nome": "Leonardo",
+	"pontuacao": "100",
+	"categoria": {
+		"id": 1,
+		"descricao": "Frutas Vermelhas"
+	}
+}
+```
+
+Rota para listar o Ranking: __URL/ranking/listar__
