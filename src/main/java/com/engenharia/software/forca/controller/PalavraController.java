@@ -43,29 +43,35 @@ public class PalavraController {
 			@RequestBody PalavraDTO palavraDTO) {
 		Palavra palavraParaAtualizacao = ConverterPalavraDtoToEntity.converter(palavraDTO);
 		Optional<Palavra> palavraAtualizada = palavraService.atualizarPalavra(palavraId, palavraParaAtualizacao);
-		
-		if(!palavraAtualizada.isPresent()) {
+
+		if (!palavraAtualizada.isPresent()) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
-		
+
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
-	
+
 	@DeleteMapping(value = "/remover/{palavraId}")
 	public ResponseEntity<Palavra> removerPalavra(@PathVariable("palavraId") Long palavraId) {
 		palavraService.removerPalavra(palavraId);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
-	
+
 	@GetMapping(value = "/listar")
 	public ResponseEntity<List<Palavra>> listarTodasPalavras() {
 		List<Palavra> palavras = palavraService.listarPalavras();
-		
-		if(palavras == null || palavras.isEmpty()) {
+
+		if (palavras == null || palavras.isEmpty()) {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
-		
+
 		return new ResponseEntity<List<Palavra>>(palavras, HttpStatus.OK);
+	}
+
+	@GetMapping(value = "/listar/{categoriaId}/categoria")
+	public Optional<List<Palavra>> listarPalavrasPorCategoria(@PathVariable("categoriaId") Long categoriaId) {
+		Optional<List<Palavra>> palavras = palavraService.listarPalavrasPorCategoria(categoriaId);
+		return palavras;
 	}
 
 }
