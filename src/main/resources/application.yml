@@ -12,13 +12,13 @@ spring:
       ddl-auto: validate
       
   datasource:
-    url: ${JDBC_DATABASE_URL}
+    url: jdbc:${JDBC_DATABASE_URL}
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
     
   flyway:
     enabled: true
-    url: ${JDBC_DATABASE_URL}
+    url: jdbc:${JDBC_DATABASE_URL}
     user: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
     locations: classpath:db/migration
