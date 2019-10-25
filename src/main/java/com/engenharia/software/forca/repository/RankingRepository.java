@@ -7,7 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.engenharia.software.forca.domain.RodadaJogadorDTO;
 import com.engenharia.software.forca.model.Ranking;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface RankingRepository extends JpaRepository<Ranking, Long>{
 	
 	@Query(
